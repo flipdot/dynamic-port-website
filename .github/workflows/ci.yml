@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.4"
+          bundler-cache: true
+
+      - name: Build the site
+        run: bundle exec jekyll build
+
+      - name: Verify build output
+        run: |
+          for page in index.html ziele/index.html kontakt/index.html 404.html; do
+            test -s "_site/$page" || { echo "missing or empty: _site/$page"; exit 1; }
+          done
+          grep -q "Willkommen bei Dynamic Port" _site/index.html \
+            || { echo "index.html is missing the expected heading"; exit 1; }
+          echo "build output OK"
