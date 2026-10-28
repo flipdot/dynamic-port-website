@@ -10,5 +10,3 @@ Wir haben jeden ersten Donnerstag im Monat ab 18 Uhr die Räume des [flipdot e.V
 
 Dabei ist unsere Zielgruppe technikinteressierte FNTI unabhängig von schon bestehenden Kenntnissen. Es ist auf keinen Fall nötig,
 schon programmieren oder löten zu können, es reicht ein Interesse an irgendeinem Bereich von Technik.
-
-Das erste Treffen findet am Donnerstag, den 30.01.2020 um 18 Uhr im Flipdot Hackerspace in Kassel statt. 
